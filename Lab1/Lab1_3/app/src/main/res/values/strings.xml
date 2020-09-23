@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab1_3</string>
+    <string name="textLayout1">Text for the first element</string>
+    <string name="textLayout2">Text for the second element</string>
+    <string name="textLayout3">Text for the third element</string>
+    <string name="textLayout4">Text for the fourth element</string>
+    <string name="textLayout5">Text for the fifth element</string>
+    <string name="textLayout6">And the final one</string>
+</resources>
