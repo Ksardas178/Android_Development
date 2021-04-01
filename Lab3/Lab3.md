@@ -95,8 +95,7 @@ codelabs.
 приведенному изображению с помощью Activity, Intent и
 StartActivityForResult.
 
-![](media/image1.png){width="6.496527777777778in"
-height="7.2027777777777775in"}
+![image](https://user-images.githubusercontent.com/43096732/113268462-12c28680-92e0-11eb-8e20-dcfd61ba4bb8.png)
 
 Рисунок 1 Окна создаваемых Activity
 
