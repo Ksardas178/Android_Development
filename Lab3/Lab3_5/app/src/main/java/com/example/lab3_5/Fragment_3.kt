@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.lab3_5.databinding.Fragment3Binding
 
-class ThirdFragment : Fragment() {
+class Fragment_3 : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -32,6 +32,11 @@ class ThirdFragment : Fragment() {
             it.findNavController().navigate(R.id.action_thirdFragment_to_secondFragment)
         }
 
-        return binding.root
+        binding.toMoreButton3.setOnClickListener {
+            Log.e(logTag, "to more button clicked")
+            it.findNavController().navigate(R.id.action_thirdFragment_to_fragment_More)
         }
+
+        return binding.root
+    }
 }

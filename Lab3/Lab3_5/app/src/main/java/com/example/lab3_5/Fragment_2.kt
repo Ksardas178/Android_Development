@@ -10,14 +10,16 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.lab3_5.databinding.Fragment2Binding
 
-class SecondFragment : Fragment() {
+class Fragment_2 : Fragment() {
+
+    private val logTag = "SecondFragment"
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
-        val logTag = "SecondFragment"
         val binding = Fragment2Binding.inflate(layoutInflater)
 
         Log.e(logTag, "second fragment created")

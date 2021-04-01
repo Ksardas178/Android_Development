@@ -1,35 +1,30 @@
-package com.example.lab3_2
+package com.example.lab3_3
 
 import android.content.Intent
-import android.os.Bundle
-import android.os.PersistableBundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lab3_2.databinding.Activity2Binding
+import android.os.Bundle
+import android.util.Log
+import com.example.lab3_3.databinding.Activity1Binding
 
-class SecondActivity: AppCompatActivity() {
+class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        val logTag = "SecondActivity"
-        Log.e(logTag, "second activity created")
+        val logTag = "FirstActivity"
+        Log.e(logTag, "first activity created")
         super.onCreate(savedInstanceState)
 
-        val binding = Activity2Binding.inflate(layoutInflater)
+        val binding = Activity1Binding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.toFirstButton2.setOnClickListener {
-            Log.e(logTag, "to first button clicked")
-            val intent = Intent(this, FirstActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
-            startActivity(intent)
+        binding.textView.setOnClickListener {
+            Log.e(logTag, "textView clicked")
         }
 
-        binding.toThirdButton2.setOnClickListener {
-            Log.e(logTag, "to third button clicked")
-            val intent = Intent(this, ThirdActivity::class.java)
+        binding.toSecondButton1.setOnClickListener {
+            Log.e(logTag, "to second button clicked")
+            val intent = Intent(this, SecondActivity::class.java)
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
         }
-
 
         val bottomNav = binding.bottomNav
 
@@ -44,6 +39,5 @@ class SecondActivity: AppCompatActivity() {
             }
             false
         }
-
     }
 }

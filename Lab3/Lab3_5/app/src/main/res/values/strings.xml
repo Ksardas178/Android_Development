@@ -1,6 +1,16 @@
 <resources>
-    <string name="app_name">Lab3_3</string>
+    <string name="app_name">Lab3_5</string>
     <string name="activity_1_name">Activity 1</string>
-    <string name="to_second_1">to second</string>
+    <string name="activity_2_name">Activity 2</string>
+    <string name="activity_3_name">Activity 3</string>
+    <string name="activity_about_name">Activity about</string>
+
+    <string name="to_first_button">to first</string>
+    <string name="to_second_button">to second</string>
+    <string name="to_third_button">to third</string>
+
     <string name="about_dest_option">About</string>
+    <string name="activity_about_info">Some info</string>
+    <string name="activity_more_name">One more activity</string>
+    <string name="to_more_button">We want more activities!</string>
 </resources>

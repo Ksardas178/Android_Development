@@ -3,61 +3,58 @@ package com.example.lab3_5
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.get
+import androidx.activity.viewModels
+import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.findNavController
+import androidx.navigation.navArgs
 import com.example.lab3_5.databinding.MainActivityBinding
 import com.example.lab3_5.databinding.Fragment1Binding
+import kotlin.math.log
 
-class FirstActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
+
+    private val logTag = "MainActivity"
+
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.main_activity)
 
-        val logTag = "First Activity"
+        super.onCreate(savedInstanceState)
+
         val binding = MainActivityBinding.inflate(layoutInflater)
         val bottomNav = binding.bottomNav
+
+        setContentView(binding.root)
 
         Log.e(logTag, "first activity created")
 
         bottomNav.setOnNavigationItemSelectedListener {
             when (it.itemId) {
                 R.id.activity_about_dest -> {
+
                     Log.e(logTag, "navigation button clicked")
-                    val intent = Intent(this, ActivityAbout::class.java)
-                    startActivity(intent)
+
+                    bottomNav.visibility = View.INVISIBLE
+                    val navController = findNavController(binding.fragment1.id)
+                    navController.navigate(R.id.fragment_About)
                     return@setOnNavigationItemSelectedListener true
                 }
             }
             false
         }
     }
-}
 
-class FirstFragment : Fragment() {
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View {
-        //super.onCreate(savedInstanceState)
-
-        val logTag = "FirstFragment"
-        val binding = Fragment1Binding.inflate(layoutInflater)
-
-        Log.e(logTag, "first fragment created")
-
-        binding.toSecondButton1.setOnClickListener {
-            Log.e(logTag, "to second button clicked")
-            it.findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
-        }
-
-
-
-        return binding.root
+    override fun onBackPressed() {
+        super.onBackPressed()
+        this.findViewById<View>(R.id.bottom_nav).visibility = View.VISIBLE
     }
 }
