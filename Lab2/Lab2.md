@@ -144,25 +144,25 @@ onStart() и onResume(). При выходе из приложения посл�
 
 -   (default)
 
--   en-notlong-tvdpi-notouch-dpad-v27 (en|fr)
+-   ~~en-notlong-tvdpi-notouch-dpad-v27~~ (en|fr)
 
--   small-appliance (appliance|desk)
+-   ~~small-appliance~~ (appliance|desk)
 
--   rCA-mdpi (rCA|rFR)
+-   ~~rCA-mdpi~~ (rCA|rFR)
 
--   en (en|fr)
+-   ~~en~~ (en|fr)
 
--   en-rCA-normal-long-port-vrheadset-v25 (en|fr)
+-   ~~en-rCA-normal-long-port-vrheadset-v25~~ (en|fr)
 
--   en-rCA-xlarge-notlong-land-vrheadset-12key-nonav (en|fr)
+-   ~~en-rCA-xlarge-notlong-land-vrheadset-12key-nonav~~ (en|fr)
 
--   notlong-night-v25 (notlong|long)
+-   ~~notlong-night-v25~~ (notlong|long)
 
--   rCA-long-finger-trackball (rCA|rFR)
+-   ~~rCA-long-finger-trackball~~ (rCA|rFR)
 
--   small-notlong-hdpi (notlong|long)
+-   ~~small-notlong-hdpi~~ (notlong|long)
 
--   fr-appliance-finger-12key-wheel (nonav|wheel)
+-   ~~fr-appliance-finger-12key-wheel~~ (nonav|wheel)
 
 После вычеркивания неподходящих ресурсов будет выбрана конфигурация по
 умолчанию.
