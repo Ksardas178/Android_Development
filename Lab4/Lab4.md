@@ -32,7 +32,7 @@ bibtex, имеет 2 режима работы: normal и strict. При это�
 
 ![image](https://user-images.githubusercontent.com/43096732/114067912-01601800-98a6-11eb-89d1-b0dad3085109.png)
 
-Рисунок 1 Strict mode unit test
+**Рисунок 1 Strict mode unit test**
 
 В тесте создаем объект БД, переключаемся на режим strict, сохраняем
 первую запись в first. Затем в цикле обращаемся 20 раз к нулевой записи
@@ -43,7 +43,7 @@ bibtex, имеет 2 режима работы: normal и strict. При это�
 
 ![image](https://user-images.githubusercontent.com/43096732/114067968-0f159d80-98a6-11eb-9a43-10d24943903f.png)
 
-Рисунок 2 Shuffle flag unit test
+**Рисунок 2 Shuffle flag unit test**
 
 Так как по умолчанию флаг shuffle имеет значение true, создадим
 config-объект, для которого значение флага будет установлено в false.
@@ -68,147 +68,33 @@ config-объект, для которого значение флага буд�
 
 В ходе решения разработан класс адаптера:
 
-class Adapter(base: InputStream) :
-RecyclerView.Adapter&lt;Adapter.ViewHolder&gt;() {\
-\
-private val reader = InputStreamReader(base)\
-private val database = BibDatabase(reader)\
-\
-override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
-ViewHolder {\
-val itemView = LayoutInflater.from(parent.*context*).\
-inflate(R.layout.*item*, parent, false)\
-return ViewHolder(itemView)\
-}\
-\
-override fun onBindViewHolder(holder: ViewHolder, position: Int) {\
-<span id="_Hlk68804192" class="anchor"></span>val currentItem =
-database.getEntry(position % database.size())\
-holder.author.*text* = "Author(s): " +
-currentItem.getField(Keys.*AUTHOR*)\
-holder.pages.*text* = "Pages: " + currentItem.getField(Keys.*PAGES*)\
-holder.journal.*text* = "Journal: " +
-currentItem.getField(Keys.*JOURNAL*)\
-holder.title.*text* = "Title: " + currentItem.getField(Keys.*TITLE*)\
-}\
-\
-override fun getItemCount() = database.size()
+![image](https://user-images.githubusercontent.com/43096732/114069504-bba44f00-98a7-11eb-9d90-4fbd3f1f8d23.png)
 
-class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {\
-val author: TextView = itemView.author\
-val pages: TextView = itemView.pages\
-val title: TextView = itemView.title\
-val journal: TextView = itemView.journal\
-}\
-}
-
-Листинг 1 Adapter.kt
+**Рисунок 3 Adapter.kt**
 
 Класс данных для хранения записи о книге:
 
-data class Item(val author: String, val pages: String,\
-val title: String, val journal: String) {}
+![image](https://user-images.githubusercontent.com/43096732/114068606-c6121900-98a6-11eb-830c-605dbad9915f.png)
 
-Листинг 2 Item.kt
+**Рисунок 4 Item.kt**
 
 MainActivity-класс имеет следующий вид:
 
-class MainActivity : AppCompatActivity() {\
-override fun onCreate(savedInstanceState: Bundle?) {\
-super.onCreate(savedInstanceState)\
-setContentView(R.layout.*activity\_main*)\
-val exampleList = generateList(500)\
-recycler\_view.*adapter* =
-Adapter(*resources*.openRawResource(R.raw.*articles*))\
-recycler\_view.*layoutManager* = LinearLayoutManager(this)\
-recycler\_view.setHasFixedSize(true)\
-}\
-private fun generateList(size: Int): List&lt;Item&gt; {\
-val list = ArrayList&lt;Item&gt;()\
-for (i in 0 *until* size) {\
-val item = Item( "Author","Item \$i", "title", "journal")\
-list += item\
-}\
-return list\
-}\
-}
+![image](https://user-images.githubusercontent.com/43096732/114068547-b4c90c80-98a6-11eb-8e80-bc85a23ad0c4.png)
 
-**Листинг 3 MainActivity.kt**
+**Рисунок 5 MainActivity.kt**
 
 Файл разметки MainActivity:
 
-&lt;?xml version="1.0" encoding="utf-8"?&gt;\
-&lt;RelativeLayout\
-    xmlns:android="http://schemas.android.com/apk/res/android"\
-    xmlns:tools="http://schemas.android.com/tools"\
-    android:layout\_width="match\_parent"\
-    android:layout\_height="match\_parent"\
-    tools:context=".MainActivity"&gt;\
-    &lt;androidx.recyclerview.widget.RecyclerView\
-        android:id="@+id/recycler\_view"\
-        android:layout\_width="match\_parent"\
-        android:layout\_height="match\_parent"\
-        android:clipToPadding="false"\
-        android:padding="4dp"\
-        tools:listitem="@layout/item" /&gt;\
-&lt;/RelativeLayout&gt;
+![image](https://user-images.githubusercontent.com/43096732/114068417-9105c680-98a6-11eb-9f93-41ae07290ead.png)
 
-**Листинг 4 main\_activity.xml**
+**Рисунок 6 main\_activity.xml**
 
 Файл разметки элемента в RecyclerView:
 
-&lt;?xml version="1.0" encoding="utf-8"?&gt;\
-&lt;androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"\
-    android:layout\_width="match\_parent"\
-    android:layout\_height="wrap\_content"\
-    xmlns:app="http://schemas.android.com/apk/res-auto"\
-    android:layout\_margin="4dp"&gt;\
-\
-    &lt;RelativeLayout\
-        android:layout\_width="match\_parent"\
-        android:layout\_height="match\_parent"&gt;\
-        \
-        &lt;TextView\
-            android:id="@+id/author"\
-            android:textStyle="bold"\
-            android:textColor="@color/black"\
-            android:layout\_width="match\_parent"\
-            android:layout\_height="wrap\_content"\
-            android:layout\_alignParentStart="true"\
-            android:layout\_marginEnd="8dp"\
-            android:text="@string/placeholder" /&gt;\
-        \
-        &lt;TextView\
-            android:id="@+id/title"\
-            android:layout\_width="match\_parent"\
-            android:layout\_height="wrap\_content"\
-            android:layout\_below="@+id/author"\
-            android:layout\_marginTop="5dp"\
-            android:layout\_marginEnd="8dp"\
-            android:text="@string/placeholder" /&gt;\
-        \
-        &lt;TextView\
-            android:id="@+id/pages"\
-            android:layout\_width="match\_parent"\
-            android:layout\_height="wrap\_content"\
-            android:layout\_below="@+id/title"\
-            android:layout\_marginTop="5dp"\
-            android:layout\_marginEnd="8dp"\
-            android:text="@string/placeholder" /&gt;\
-        \
-        &lt;TextView\
-            android:id="@+id/journal"\
-            android:layout\_width="match\_parent"\
-            android:layout\_height="wrap\_content"\
-            android:layout\_below="@+id/pages"\
-            android:layout\_marginTop="5dp"\
-            android:layout\_marginEnd="8dp"\
-            android:text="@string/placeholder" /&gt;\
-    &lt;/RelativeLayout&gt;\
-&lt;/androidx.cardview.widget.CardView&gt;
+![image](https://user-images.githubusercontent.com/43096732/114069431-aa5b4280-98a7-11eb-90b5-6892575a88a1.png)
 
-**Листинг 5 item.xml**
+**Рисунок 7 item.xml**
 
 Задача 3. Бесконечный список
 ----------------------------
