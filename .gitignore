@@ -1,6 +1,7 @@
 desktop.ini
 myVar.txt
 Materials
+
 *.doc*
 
 *.tmp
