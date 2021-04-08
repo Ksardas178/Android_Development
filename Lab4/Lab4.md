@@ -30,8 +30,7 @@ bibtex, имеет 2 режима работы: normal и strict. При это�
 Исходя из вышесказанного, приходим к следующему unit-тесту для проверки
 работы strict mode:
 
-![](media/image1.png){width="6.496527777777778in"
-height="4.566666666666666in"}
+![image](https://user-images.githubusercontent.com/43096732/114067912-01601800-98a6-11eb-89d1-b0dad3085109.png)
 
 Рисунок 1 Strict mode unit test
 
@@ -42,7 +41,7 @@ height="4.566666666666666in"}
 
 Тест shuffleFlag выглядит следующим образом:
 
-![](media/image2.png){width="6.496527777777778in" height="4.875in"}
+![image](https://user-images.githubusercontent.com/43096732/114067968-0f159d80-98a6-11eb-9a43-10d24943903f.png)
 
 Рисунок 2 Shuffle flag unit test
 
