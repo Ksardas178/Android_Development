@@ -139,18 +139,18 @@ return list\
 
 &lt;?xml version="1.0" encoding="utf-8"?&gt;\
 &lt;RelativeLayout\
-xmlns:android="http://schemas.android.com/apk/res/android"\
-xmlns:tools="http://schemas.android.com/tools"\
-android:layout\_width="match\_parent"\
-android:layout\_height="match\_parent"\
-tools:context=".MainActivity"&gt;\
-&lt;androidx.recyclerview.widget.RecyclerView\
-android:id="@+id/recycler\_view"\
-android:layout\_width="match\_parent"\
-android:layout\_height="match\_parent"\
-android:clipToPadding="false"\
-android:padding="4dp"\
-tools:listitem="@layout/item" /&gt;\
+    xmlns:android="http://schemas.android.com/apk/res/android"\
+    xmlns:tools="http://schemas.android.com/tools"\
+    android:layout\_width="match\_parent"\
+    android:layout\_height="match\_parent"\
+    tools:context=".MainActivity"&gt;\
+    &lt;androidx.recyclerview.widget.RecyclerView\
+        android:id="@+id/recycler\_view"\
+        android:layout\_width="match\_parent"\
+        android:layout\_height="match\_parent"\
+        android:clipToPadding="false"\
+        android:padding="4dp"\
+        tools:listitem="@layout/item" /&gt;\
 &lt;/RelativeLayout&gt;
 
 **Листинг 4 main\_activity.xml**
@@ -159,53 +159,53 @@ tools:listitem="@layout/item" /&gt;\
 
 &lt;?xml version="1.0" encoding="utf-8"?&gt;\
 &lt;androidx.cardview.widget.CardView
-xmlns:android="http://schemas.android.com/apk/res/android"\
-android:layout\_width="match\_parent"\
-android:layout\_height="wrap\_content"\
-xmlns:app="http://schemas.android.com/apk/res-auto"\
-android:layout\_margin="4dp"&gt;\
+    xmlns:android="http://schemas.android.com/apk/res/android"\
+    android:layout\_width="match\_parent"\
+    android:layout\_height="wrap\_content"\
+    xmlns:app="http://schemas.android.com/apk/res-auto"\
+    android:layout\_margin="4dp"&gt;\
 \
-&lt;RelativeLayout\
-android:layout\_width="match\_parent"\
-android:layout\_height="match\_parent"&gt;\
-\
-&lt;TextView\
-android:id="@+id/author"\
-android:textStyle="bold"\
-android:textColor="@color/black"\
-android:layout\_width="match\_parent"\
-android:layout\_height="wrap\_content"\
-android:layout\_alignParentStart="true"\
-android:layout\_marginEnd="8dp"\
-android:text="@string/placeholder" /&gt;\
-\
-&lt;TextView\
-android:id="@+id/title"\
-android:layout\_width="match\_parent"\
-android:layout\_height="wrap\_content"\
-android:layout\_below="@+id/author"\
-android:layout\_marginTop="5dp"\
-android:layout\_marginEnd="8dp"\
-android:text="@string/placeholder" /&gt;\
-\
-&lt;TextView\
-android:id="@+id/pages"\
-android:layout\_width="match\_parent"\
-android:layout\_height="wrap\_content"\
-android:layout\_below="@+id/title"\
-android:layout\_marginTop="5dp"\
-android:layout\_marginEnd="8dp"\
-android:text="@string/placeholder" /&gt;\
-\
-&lt;TextView\
-android:id="@+id/journal"\
-android:layout\_width="match\_parent"\
-android:layout\_height="wrap\_content"\
-android:layout\_below="@+id/pages"\
-android:layout\_marginTop="5dp"\
-android:layout\_marginEnd="8dp"\
-android:text="@string/placeholder" /&gt;\
-&lt;/RelativeLayout&gt;\
+    &lt;RelativeLayout\
+        android:layout\_width="match\_parent"\
+        android:layout\_height="match\_parent"&gt;\
+        \
+        &lt;TextView\
+            android:id="@+id/author"\
+            android:textStyle="bold"\
+            android:textColor="@color/black"\
+            android:layout\_width="match\_parent"\
+            android:layout\_height="wrap\_content"\
+            android:layout\_alignParentStart="true"\
+            android:layout\_marginEnd="8dp"\
+            android:text="@string/placeholder" /&gt;\
+        \
+        &lt;TextView\
+            android:id="@+id/title"\
+            android:layout\_width="match\_parent"\
+            android:layout\_height="wrap\_content"\
+            android:layout\_below="@+id/author"\
+            android:layout\_marginTop="5dp"\
+            android:layout\_marginEnd="8dp"\
+            android:text="@string/placeholder" /&gt;\
+        \
+        &lt;TextView\
+            android:id="@+id/pages"\
+            android:layout\_width="match\_parent"\
+            android:layout\_height="wrap\_content"\
+            android:layout\_below="@+id/title"\
+            android:layout\_marginTop="5dp"\
+            android:layout\_marginEnd="8dp"\
+            android:text="@string/placeholder" /&gt;\
+        \
+        &lt;TextView\
+            android:id="@+id/journal"\
+            android:layout\_width="match\_parent"\
+            android:layout\_height="wrap\_content"\
+            android:layout\_below="@+id/pages"\
+            android:layout\_marginTop="5dp"\
+            android:layout\_marginEnd="8dp"\
+            android:text="@string/placeholder" /&gt;\
+    &lt;/RelativeLayout&gt;\
 &lt;/androidx.cardview.widget.CardView&gt;
 
 **Листинг 5 item.xml**
