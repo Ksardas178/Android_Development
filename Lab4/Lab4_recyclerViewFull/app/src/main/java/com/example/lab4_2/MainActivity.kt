@@ -10,18 +10,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val exampleList = generateList(500)
         recycler_view.adapter = Adapter(resources.openRawResource(R.raw.articles))
         recycler_view.layoutManager = LinearLayoutManager(this)
         recycler_view.setHasFixedSize(true)
-    }
-    private fun generateList(size: Int): List<Item> {
-        val list = ArrayList<Item>()
-        for (i in 0 until size) {
-            val item = Item( "Author","Item $i", "title", "journal")
-            list += item
-        }
-        return list
     }
 }
 
