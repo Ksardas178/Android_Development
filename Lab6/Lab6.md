@@ -41,15 +41,13 @@
 
 В ходе решения разработан следующий код MainActivity:
 
-![](media/image1.png){width="5.2715693350831145in"
-height="5.615367454068242in"}
+![image](https://user-images.githubusercontent.com/43096732/114415533-74c09d00-9bb8-11eb-9e9e-5f83c2fc615e.png)
 
 Рисунок 1 MainActivity.kt
 
 Переопределены методы onPause и onResume:
 
-![](media/image2.png){width="4.479792213473316in"
-height="5.229896106736658in"}
+![image](https://user-images.githubusercontent.com/43096732/114415548-78542400-9bb8-11eb-8c56-c73af8e2052a.png)
 
 Рисунок 2 Переопределение методов onPause и onResume
 
@@ -73,8 +71,7 @@ height="5.229896106736658in"}
 
 Разработанный класс MainActivity:
 
-![](media/image3.png){width="6.417562335958006in"
-height="7.938607830271216in"}
+![image](https://user-images.githubusercontent.com/43096732/114415610-82762280-9bb8-11eb-8aac-f45a97525904.png)
 
 Рисунок 3 MainActivity.kt
 
@@ -88,8 +85,7 @@ AsyncTask (deprecated), предоставляющий более удобный
 на выполнение AsyncTask из других потоков позволяет связка функции
 cancel и свойства isCancelled.
 
-![](media/image4.png){width="6.250872703412074in"
-height="2.958746719160105in"}
+![image](https://user-images.githubusercontent.com/43096732/114415621-86a24000-9bb8-11eb-8a34-1d8e523086ed.png)
 
 Рисунок 4 Вложенный класс MyTask
 
@@ -101,8 +97,7 @@ height="2.958746719160105in"}
 вместе с отменой самой корутины. Это производится с помощью job.cancel в
 onPause.
 
-![](media/image5.png){width="5.302823709536308in"
-height="8.34491469816273in"}
+![image](https://user-images.githubusercontent.com/43096732/114415655-902ba800-9bb8-11eb-8988-8453a124e1c7.png)
 
 Рисунок 5 Класс MainActivity.kt
 
@@ -118,8 +113,7 @@ height="8.34491469816273in"}
 
 Разработанный код MainActivity:
 
-![](media/image6.png){width="6.496527777777778in"
-height="3.2979166666666666in"}
+![image](https://user-images.githubusercontent.com/43096732/114415696-9752b600-9bb8-11eb-9b82-73da03ec316d.png)
 
 Рисунок 6 MainActivity.kt
 
@@ -138,8 +132,9 @@ height="3.2979166666666666in"}
 
 Помимо переопределения методов AsyncTask добавлена функция загрузки
 изображения по заданному
-URL-адресу:![](media/image7.png){width="6.496527777777778in"
-height="8.554166666666667in"}
+URL-адресу:
+
+![image](https://user-images.githubusercontent.com/43096732/114415742-a20d4b00-9bb8-11eb-8700-e64bfc80637e.png)
 
 Рисунок 7 Класс DownloadImage
 
@@ -154,8 +149,7 @@ height="8.554166666666667in"}
 
 Для решения задачи разработан следующий код MainActivity:
 
-![](media/image8.png){width="6.496527777777778in"
-height="5.870138888888889in"}
+![image](https://user-images.githubusercontent.com/43096732/114415757-a76a9580-9bb8-11eb-801a-687472e9ea95.png)
 
 Рисунок 8 MainActivity.kt
 
@@ -192,8 +186,7 @@ height="5.870138888888889in"}
 
 Добавим код в обработчик нажатия на кнопку:
 
-![](media/image9.png){width="6.136272965879265in"
-height="3.8234503499562553in"}
+![image](https://user-images.githubusercontent.com/43096732/114415799-b18c9400-9bb8-11eb-85f0-19e2caee5eeb.png)
 
 Рисунок 9 Загрузка картинки с помощью библиотеки Picasso
 
