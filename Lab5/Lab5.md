@@ -9,7 +9,7 @@
 
 ### Задание
 
-Ознакомиться со Espresso Framework и разработать приложение, в котором
+Ознакомиться с Espresso Framework и разработать приложение, в котором
 есть одна кнопка и текстовое поле. При (первом) нажатии на кнопку текст
 на ней должен меняться.
 
@@ -21,8 +21,7 @@
 
 В ходе решения разработан следующий код MainActivity:
 
-![](media/image1.png){width="6.157109580052493in"
-height="2.7503838582677167in"}
+![image](https://user-images.githubusercontent.com/43096732/114264418-8a389a00-99f3-11eb-84a0-a4c9c6a9932f.png)
 
 Рисунок 1 MainActivity.kt
 
@@ -30,15 +29,13 @@ height="2.7503838582677167in"}
 
 Файл разметки выглядит следующим образом:
 
-![](media/image2.png){width="4.667318460192476in"
-height="7.698990594925634in"}
+![image](https://user-images.githubusercontent.com/43096732/114264411-81e05f00-99f3-11eb-8a91-4f425af55d7c.png)
 
 Рисунок 2 activity\_main.xml
 
 Также написан класс тестов:
 
-![](media/image3.png){width="6.496527777777778in"
-height="5.526388888888889in"}
+![image](https://user-images.githubusercontent.com/43096732/114264404-7725ca00-99f3-11eb-9437-3748ec650538.png)
 
 Рисунок 3 MyTest.kt
 
@@ -63,8 +60,7 @@ height="5.526388888888889in"}
 
 -   Тестирование навигации по кнопкам внутри приложения:
 
-![](media/image4.png){width="6.496527777777778in"
-height="4.606944444444444in"}
+![image](https://user-images.githubusercontent.com/43096732/114264424-93296b80-99f3-11eb-8b8a-49dd5e819e8b.png)
 
 Рисунок 4 startActivityTest
 
@@ -75,8 +71,7 @@ Activity проверяется соответствие реальной Activi
 -   Тестирование навигации по клавише back, проверка глубины backstack
     (в т. ч. корректного завершения приложения):
 
-![](media/image5.png){width="5.771639326334208in"
-height="7.125994094488189in"}
+![image](https://user-images.githubusercontent.com/43096732/114264427-97ee1f80-99f3-11eb-86d8-163573ebc7ef.png)
 
 Рисунок 5 backStackTest
 
@@ -90,8 +85,7 @@ height="7.125994094488189in"}
 Также написана вспомогательная функция для проверки нахождения в
 конкретной Activity:
 
-![](media/image6.png){width="6.496527777777778in"
-height="2.1215277777777777in"}
+![image](https://user-images.githubusercontent.com/43096732/114264429-9cb2d380-99f3-11eb-9efb-baaffb3e2271.png)
 
 Рисунок 6 checkView function
 

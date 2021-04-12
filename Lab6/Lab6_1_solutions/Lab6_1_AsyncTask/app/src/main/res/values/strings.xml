@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lab6_1_AsyncTask</string>
+    <string name="timer_text">"Seconds elapsed: %d"</string>
+</resources>
