@@ -6,4 +6,5 @@
     <string name="task_1">Task 1</string>
     <string name="downloaded_msg">Downloaded</string>
     <string name="image_content_description">Here you\'ll see downloaded image</string>
+    <string name="text_resource">At this point you should open the second app from this lab and then receive a broadcast from the first activity</string>
 </resources>
