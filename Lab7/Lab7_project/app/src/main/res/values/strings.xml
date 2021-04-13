@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Lab7</string>
+    <string name="download_image_text">Download your image</string>
+    <string name="task_3">Task 3</string>
+    <string name="task_2">Task 2</string>
+    <string name="task_1">Task 1</string>
+    <string name="downloaded_msg">Downloaded</string>
+    <string name="image_content_description">Here you\'ll see downloaded image</string>
+</resources>
