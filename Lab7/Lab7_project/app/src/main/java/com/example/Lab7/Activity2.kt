@@ -10,4 +10,7 @@ class Activity2 : AppCompatActivity() {
         val binding = Activity2Binding.inflate(layoutInflater)
         setContentView(binding.root)
     }
+
+
+
 }

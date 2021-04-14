@@ -7,4 +7,7 @@
     <string name="downloaded_msg">Downloaded</string>
     <string name="image_content_description">Here you\'ll see downloaded image</string>
     <string name="text_resource">At this point you should open the second app from this lab and then receive a broadcast from the first activity</string>
+    <string name="text_not_downloaded">Image is not downloaded yet :(</string>
+    <string name="bind_service_message">Tap to bind service</string>
+    <string name="path_is_displayed">Path should be displayed now</string>
 </resources>

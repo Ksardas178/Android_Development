@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab7">
         <service android:name="com.example.Lab7.StartedService"/>
+        <service android:name=".BoundService"/>
         <activity android:name="com.example.Lab7.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

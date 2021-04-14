@@ -1,11 +1,9 @@
 package com.example.lab7_2_reciever
 
-import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
-import android.graphics.BitmapFactory
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -17,7 +15,6 @@ class MainActivity : AppCompatActivity() {
     private val logTag = "Activity1"
     private val url = "https://sun9-28.userapi.com/impf/c855220/v855220189/a4d61/Axp4Dzl8Pp4.jpg?size=1280x960&quality=96&sign=6f80b554ec40d0ece02a2c3f1cebeda8&type=album"
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -33,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         if (path != null) {
             binding.textView.text = path
         } else {
-            binding.textView.text = "Image is not downloaded yet :("
+            binding.textView.text = getString(R.string.text_not_downloaded)
         }
     }
 

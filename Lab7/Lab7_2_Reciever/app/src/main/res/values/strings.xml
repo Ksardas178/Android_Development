@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Lab7_2_Reciever</string>
     <string name="text_plug">This text should not be visible</string>
+    <string name="text_not_downloaded">Image is not downloaded yet :(</string>
 </resources>
