@@ -27,7 +27,7 @@ service, скачивающий файл из интернета. URL изобр
 производится запуск IntentService, в качестве аргументов Intent-у
 передается URL картинки для скачивания:
 
-![image](https://user-images.githubusercontent.com/43096732/114694836-9f7b3480-9d23-11eb-87a9-321a1a88d5f4.png)
+![image](https://user-images.githubusercontent.com/43096732/114695170-faad2700-9d23-11eb-88dd-513cfa23afd6.png)
 
 Рисунок 1 onClickListener кнопки загрузки
 
